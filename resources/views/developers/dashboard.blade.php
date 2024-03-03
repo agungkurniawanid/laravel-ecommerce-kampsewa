@@ -1,6 +1,6 @@
 @extends('layouts.developers.ly-dashboard')
 @section('content')
-    <div class="_container">
+    <div class="_container bg-cyan-400">
         {{-- untuk 4 card pengguna, feedback, transaksi dan mitra --}}
         <div class="_component1 p-[20px] gap-[10px] w-full grid grid-cols-4">
             {{-- card pengguna --}}
@@ -26,7 +26,7 @@
                 @include('components.cards.card-kerugian')
             </div>
             {{-- card pengguna baru --}}
-            <div class="grid grid-cols-1">
+            <div class="w-full">
                 @include('components.cards.cars-listnewuser')
             </div>
         </div>

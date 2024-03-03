@@ -49,6 +49,8 @@
         <script src="{{ asset('js/chart-keuntungan.js') }}"></script>
         <script src="{{ asset('js/chart-kerugian.js') }}"></script>
     </div>
+
+    @include('sweetalert::alert')
 </body>
 
 </html>

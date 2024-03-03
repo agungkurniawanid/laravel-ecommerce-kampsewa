@@ -18,11 +18,14 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
+        'id',
         'nama_lengkap',
         'nomor_telfon',
         'password',
         'tanggal_lahir',
-        'jenis_kelamin'
+        'jenis_kelamin',
+        'foto',
+        'level',
     ];
 
     /**
@@ -58,5 +61,17 @@ class User extends Authenticatable
             // Set the id with the 'user' prefix and the padded random number
             $user->id = 'user' . $paddedNumber;
         });
+    }
+
+    // Implementasi metode getJWTIdentifier
+    public function getJWTIdentifier()
+    {
+        return $this->getKey();
+    }
+
+    // Implementasi metode getJWTCustomClaims
+    public function getJWTCustomClaims()
+    {
+        return [];
     }
 }

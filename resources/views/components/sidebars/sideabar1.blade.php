@@ -25,23 +25,23 @@
                         </div>
                     </li>
                     <li>
-                        <a href="{{ route('dashboard.index') }}"
+                        <a href="{{ route('home.index') }}"
                             class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6">
                             <span class="inline-flex mt-1 justify-center items-center ml-4">
                                 <i class="fi fi-rr-house-chimney-window"></i>
                             </span>
-                            <span class="ml-2 text-sm tracking-wide truncate">Dashboard</span>
+                            <span class="ml-2 text-sm tracking-wide truncate {{ $title == 'Dashboard | Developer Kamp Sewa' ? 'text-indigo-500' : '' }}">Dashboard</span>
                         </a>
                     </li>
-                        <a href="#"
-                            class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6">
-                            <span class="inline-flex justify-center mt-1 items-center ml-4">
-                                <i class="fi fi-rr-bell"></i>
-                            </span>
-                            <span class="ml-2 text-sm tracking-wide truncate">Notifications</span>
-                            <span
-                                class="px-2 py-0.5 ml-auto text-xs font-medium tracking-wide text-red-500 bg-red-50 rounded-full">1.2k</span>
-                        </a>
+                    <a href="{{ route('notification.index') }}"
+                        class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6">
+                        <span class="inline-flex justify-center mt-1 items-center ml-4">
+                            <i class="fi fi-rr-bell"></i>
+                        </span>
+                        <span class="ml-2 text-sm tracking-wide truncate">Notifications</span>
+                        <span
+                            class="px-2 py-0.5 ml-auto text-xs font-medium tracking-wide text-red-500 bg-red-50 rounded-full">1.2k</span>
+                    </a>
                     </li>
                     <li class="px-5">
                         <div class="flex flex-row items-center h-8">
