@@ -16,9 +16,13 @@
     {{-- import cdn icon flaticon --}}
     <link rel="stylesheet" href="{{ asset('css/cdn/flaticon.css') }}">
 
+    {{-- import ico tab bar --}}
+    <link rel="icon" type="image/x-icon" href="{{ asset('assets/logo/logo.ico') }}">
+
     {{-- import style css --}}
     <link rel="stylesheet" href="{{ asset('css/gradient/gradient-color.css') }}">
     <link rel="stylesheet" href="{{ asset('css/arsir/corak.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/universeio/input-for-data-feedback.css') }}">
 
     {{-- import icon untuk tab --}}
     <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">

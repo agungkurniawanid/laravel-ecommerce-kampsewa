@@ -1,4 +1,4 @@
-<div class="max-w-sm p-6 bg-white border border-gray-200 rounded-[20px] shadow dark:bg-gray-800 dark:border-gray-700">
+<div class="max-w-sm p-6 bg-white rounded-[20px] dark:bg-gray-800 dark:border-gray-700">
     <div class="w-[50px] h-[50px] bg-[#EFF2F7] flex justify-center items-center rounded-full"><i
             class="mt-2 text-[20px] text-[#3C50E0] fi fi-rr-shop"></i></div>
     <div class="mt-3">

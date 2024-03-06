@@ -12,19 +12,21 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
+    protected $primaryKey = 'id_user';
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array<int, string>
      */
     protected $fillable = [
-        'id',
-        'nama_lengkap',
-        'nomor_telfon',
+        'id_user',
+        'fullname',
+        'number_phone',
         'password',
-        'tanggal_lahir',
-        'jenis_kelamin',
-        'foto',
+        'date_of_birth',
+        'gender',
+        'photo',
         'level',
     ];
 
@@ -59,7 +61,7 @@ class User extends Authenticatable
             // Pad the random number with leading zeros to make it 15 digits long
             $paddedNumber = str_pad($randomNumber, 15, '0', STR_PAD_LEFT);
             // Set the id with the 'user' prefix and the padded random number
-            $user->id = 'user' . $paddedNumber;
+            $user->id_user = 'user' . $paddedNumber;
         });
     }
 

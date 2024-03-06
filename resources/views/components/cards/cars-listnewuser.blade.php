@@ -2,7 +2,7 @@
 <!-- This is an example component -->
 <div class="max-w-2xl mx-auto">
 
-    <div class="p-4 max-w-md bg-white rounded-[20px] border shadow-md sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+    <div class="p-4 max-w-md bg-white rounded-[20px] sm:p-8 dark:bg-gray-800 dark:border-gray-700">
         <div class="flex justify-between items-center mb-4">
             <h3 class="text-xl font-bold leading-none text-gray-900 dark:text-white">Customer Baru</h3>
             <a href="#" class="text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">

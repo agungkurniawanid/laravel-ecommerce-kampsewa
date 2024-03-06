@@ -1,5 +1,5 @@
-<div class="_card-income relative w-full gradient-1 rounded-[20px]">
-    <img class="object-cover w-full h-full" src="{{ asset('assets/accessories/gradient 3-04 1 1.png') }}"
+<div class="_card-income relative w-full gradient-1 overflow-hidden rounded-[20px]">
+    <img class="object-cover shadow-box-shadow-11 w-full h-full" src="{{ asset('assets/accessories/gradient 3-04 1 1.png') }}"
         alt="">
     <div
         class="_wrapper-content-card h-full grid grid-cols-1 justify-between w-full top-0 left-0 p-[1rem] absolute z-10">

@@ -14,38 +14,46 @@
     <!-- component -->
     <div class="min-h-screen flex flex-col flex-auto flex-shrink-0 antialiased bg-gray-50 text-gray-800">
         <div class="fixed flex flex-col top-0 left-0 w-64 bg-white h-full border-r">
-            <div class="px-5 flex items-center h-14">
+            <div class="px-5 flex mt-[20px] items-center h-14">
                 <div class="text-[24px] font-black">KampSewa.</div>
             </div>
             <div class="overflow-y-auto overflow-x-hidden flex-grow">
                 <ul class="flex flex-col py-4 space-y-1">
+
+                    {{-- MENU UTAMA --}}
                     <li class="px-5">
                         <div class="flex flex-row items-center h-8">
-                            <div class="text-sm font-medium tracking-wide text-[#8B97A8]">Menu Utama</div>
+                            <div class="text-sm font-medium tracking-wide text-[#8B97A8]">Utama</div>
                         </div>
                     </li>
                     <li>
                         <a href="{{ route('home.index') }}"
-                            class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6">
+                            class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6 {{ $title == 'Dashboard | Developer Kamp Sewa' ? 'bg-gray-50 border-l-4 border-indigo-500' : '' }}">
                             <span class="inline-flex mt-1 justify-center items-center ml-4">
-                                <i class="fi fi-rr-house-chimney-window"></i>
+                                <i
+                                    class="{{ $title == 'Dashboard | Developer Kamp Sewa' ? 'text-indigo-500' : '' }} fi fi-rr-house-chimney-window"></i>
                             </span>
-                            <span class="ml-2 text-sm tracking-wide truncate {{ $title == 'Dashboard | Developer Kamp Sewa' ? 'text-indigo-500' : '' }}">Dashboard</span>
+                            <span
+                                class="ml-2 text-sm tracking-wide truncate {{ $title == 'Dashboard | Developer Kamp Sewa' ? 'text-indigo-500' : '' }}">Dashboard</span>
                         </a>
                     </li>
                     <a href="{{ route('notification.index') }}"
-                        class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6">
+                        class="{{ $title == 'Dashboard | Notification' ? 'bg-gray-50 border-l-4 border-indigo-500' : '' }} relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6">
                         <span class="inline-flex justify-center mt-1 items-center ml-4">
-                            <i class="fi fi-rr-bell"></i>
+                            <i
+                                class="fi fi-rr-bell {{ $title == 'Dashboard | Notification' ? 'text-indigo-500' : '' }}"></i>
                         </span>
-                        <span class="ml-2 text-sm tracking-wide truncate">Notifications</span>
+                        <span
+                            class="ml-2 {{ $title == 'Dashboard | Notification' ? 'text-indigo-500' : '' }} text-sm tracking-wide truncate">Notifications</span>
                         <span
                             class="px-2 py-0.5 ml-auto text-xs font-medium tracking-wide text-red-500 bg-red-50 rounded-full">1.2k</span>
                     </a>
                     </li>
+
+                    {{-- MENU CUSTOMER --}}
                     <li class="px-5">
                         <div class="flex flex-row items-center h-8">
-                            <div class="text-sm font-medium tracking-wide text-[#8B97A8]">Menu Pengguna</div>
+                            <div class="text-sm font-medium tracking-wide text-[#8B97A8]">Customer</div>
                         </div>
                     </li>
                     <li>
@@ -86,6 +94,137 @@
                                 class="px-2 py-0.5 ml-auto text-xs font-medium tracking-wide text-green-500 bg-green-50 rounded-full">15</span>
                         </a>
                     </li>
+
+                    {{-- MENU MONITORING FITUR --}}
+                    <li class="px-5">
+                        <div class="flex flex-row items-center h-8">
+                            <div class="text-sm font-medium tracking-wide text-[#8B97A8]">Monitoring Fitur</div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6">
+                            <span class="inline-flex mt-1 justify-center items-center ml-4">
+                                <i class="fi fi-rr-ad"></i>
+                            </span>
+                            <span class="ml-2 text-sm tracking-wide truncate">Permintaan Iklan</span>
+                        </a>
+                    </li>
+
+                    {{-- MENU ANGGOTA --}}
+                    <li class="px-5">
+                        <div class="flex flex-row items-center h-8">
+                            <div class="text-sm font-medium tracking-wide text-[#8B97A8]">Anggota</div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6">
+                            <span class="inline-flex mt-1 justify-center items-center ml-4">
+                                <i class="fi fi-rr-browser"></i>
+                            </span>
+                            <span class="ml-2 text-sm tracking-wide truncate">Web Developer</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6">
+                            <span class="inline-flex mt-1 justify-center items-center ml-4">
+                                <i class="fi fi-rr-mobile-notch"></i>
+                            </span>
+                            <span class="ml-2 text-sm tracking-wide truncate">Mobile Developer</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6">
+                            <span class="inline-flex mt-1 justify-center items-center ml-4">
+                                <i class="fi fi-rr-magic-wand"></i>
+                            </span>
+                            <span class="ml-2 text-sm tracking-wide truncate">UI/UX</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6">
+                            <span class="inline-flex mt-1 justify-center items-center ml-4">
+                                <i class="fi fi-rr-test"></i>
+                            </span>
+                            <span class="ml-2 text-sm tracking-wide truncate">Tester</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6">
+                            <span class="inline-flex mt-1 justify-center items-center ml-4">
+                                <i class="fi fi-rr-database"></i>
+                            </span>
+                            <span class="ml-2 text-sm tracking-wide truncate">Database Administrator</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6">
+                            <span class="inline-flex mt-1 justify-center items-center ml-4">
+                                <i class="fi fi-rr-chart-histogram"></i>
+                            </span>
+                            <span class="ml-2 text-sm tracking-wide truncate">Analisis Bisnis</span>
+                        </a>
+                    </li>
+
+                    {{-- MENU KEUANGAN --}}
+                    <li class="px-5">
+                        <div class="flex flex-row items-center h-8">
+                            <div class="text-sm font-medium tracking-wide text-[#8B97A8]">Keuangan & Laporan</div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6">
+                            <span class="inline-flex mt-1 justify-center items-center ml-4">
+                                <i class="fi fi-rr-revenue-alt"></i>
+                            </span>
+                            <span class="ml-2 text-sm tracking-wide truncate">Penghasilan</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6">
+                            <span class="inline-flex mt-1 justify-center items-center ml-4">
+                                <i class="fi fi-rr-coins"></i>
+                            </span>
+                            <span class="ml-2 text-sm tracking-wide truncate">Pengeluaran</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6">
+                            <span class="inline-flex mt-1 justify-center items-center ml-4">
+                                <i class="fi fi-rr-chat-arrow-grow"></i>
+                            </span>
+                            <span class="ml-2 text-sm tracking-wide truncate">Keuntungan</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6">
+                            <span class="inline-flex mt-1 justify-center items-center ml-4">
+                                <i class="fi fi-rr-chat-arrow-down"></i>
+                            </span>
+                            <span class="ml-2 text-sm tracking-wide truncate">Kerugian</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6">
+                            <span class="inline-flex mt-1 justify-center items-center ml-4">
+                                <i class="fi fi-rr-book"></i>
+                            </span>
+                            <span class="ml-2 text-sm tracking-wide truncate">Rekap Keuangan</span>
+                        </a>
+                    </li>
+
+                    {{-- MENU SETTINGS --}}
                     <li class="px-5">
                         <div class="flex flex-row items-center h-8">
                             <div class="text-sm font-medium tracking-wide text-[#8B97A8]">Settings</div>

@@ -1,13 +1,13 @@
 /* mengatur scrollbar  */
 ::-webkit-scrollbar {
-    width: 0px;
+    width: 5px;
     border-radius: 100%;
     height: 2px;
 }
 
 /* Warna track */
 ::-webkit-scrollbar-track {
-    background: #F2F5FD;
+    background: white;
 }
 
 /* Warna handle */

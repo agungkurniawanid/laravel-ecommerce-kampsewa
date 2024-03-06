@@ -1,4 +1,4 @@
-<div class="_card-keuntungan flex justify-between shadow p-[20px] w-full h-full bg-white rounded-[20px]">
+<div class="_card-keuntungan flex justify-between p-[20px] w-full h-full bg-white rounded-[20px]">
     <div class="_heading flex flex-col justify-between">
         <div>
             <div class="flex items-center gap-[10px]">

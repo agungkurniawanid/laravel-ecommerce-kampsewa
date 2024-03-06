@@ -1,5 +1,5 @@
 <div class="_card-expenses relative bg-white rounded-[20px] w-full">
-    <div class="_wrapper-content-card h-full grid bg-white shadow rounded-[20px] grid-cols-1 p-[1rem] justify-between w-full">
+    <div class="_wrapper-content-card h-full grid bg-white rounded-[20px] grid-cols-1 p-[1rem] justify-between w-full">
         <div class="w-full flex justify-between items-center">
             <div class="w-auto">
                 <p class="text-[#343B7C] text-[16px]">Pengeluaran</p>

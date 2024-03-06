@@ -1,6 +1,6 @@
 @extends('layouts.developers.ly-dashboard')
 @section('content')
-    <div class="_container bg-cyan-400">
+    <div class="_container w-full">
         {{-- untuk 4 card pengguna, feedback, transaksi dan mitra --}}
         <div class="_component1 p-[20px] gap-[10px] w-full grid grid-cols-4">
             {{-- card pengguna --}}

@@ -1,7 +1,7 @@
-<div class="_wrapper-table shadow w-full p-5 bg-white rounded-[20px]">
+<div class="_wrapper-table w-full p-5 bg-white rounded-[20px]">
     <div class="_heading mb-4 text-[20px] font-medium capitalize"><h1>Daftar Pengguna Online</h1></div>
     <!-- component -->
-    <div class="overflow-x-auto rounded-lg border border-gray-200 shadow-md">
+    <div class="overflow-x-auto rounded-lg">
         <table class="w-full border-collapse table-auto bg-white text-left text-sm text-gray-500">
             <thead class="bg-gray-50">
                 <tr>

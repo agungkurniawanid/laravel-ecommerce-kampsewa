@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ asset('css/cdn-icon.css') }}">
     <link rel="stylesheet" href="{{ asset('css/gradient/gradient-color.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ asset('assets/logo/logo.ico') }}">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
     <title>{{ $title }}</title>
     @vite('resources/css/app.css')
@@ -27,7 +28,7 @@
                         class="_input-username w-full focus-within:border-[#5038ED] focus-within:border-[2px] rounded-[10px] bg-[#F0EDFF] p-[10px] flex items-center gap-[10px]">
                         <div class="_icon"><i class="text-[20px] font-bold fi fi-rr-user"></i></div>
                         <input class="bg-transparent w-full text-[14px] font-normal focus:outline-none" type="text"
-                            name="nomor_telfon" placeholder="Masukkan Nama Lengkap atau nomor Telfon">
+                            name="number_phone" placeholder="Masukkan Nama Lengkap atau nomor Telfon">
                     </div>
                     <div
                         class="_input-password w-full focus-within:border-[#5038ED] focus-within:border-[2px] rounded-[10px] bg-[#F0EDFF] p-[10px] flex items-center gap-[10px]">

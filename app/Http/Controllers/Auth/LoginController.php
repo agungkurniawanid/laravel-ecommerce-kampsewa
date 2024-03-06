@@ -20,19 +20,19 @@ class LoginController extends Controller
     public function login(Request $request)
     {
         $credentials = $request->validate([
-            'nomor_telfon' => ['required'],
+            'number_phone' => ['required'],
             'password' => ['required'],
         ]);
 
         // Cek apakah pengguna masuk menggunakan nomor telepon atau nama lengkap
-        $user = User::where('nomor_telfon', $credentials['nomor_telfon'])
-            ->orWhere('nama_lengkap', $credentials['nomor_telfon'])
+        $user = User::where('number_phone', $credentials['number_phone'])
+            ->orWhere('fullname', $credentials['number_phone'])
             ->first();
 
         if ($user) {
             if (
-                Auth::attempt(['nomor_telfon' => $user->nomor_telfon, 'password' => $credentials['password']]) ||
-                Auth::attempt(['nama_lengkap' => $user->nama_lengkap, 'password' => $credentials['password']])
+                Auth::attempt(['number_phone' => $user->number_phone, 'password' => $credentials['password']]) ||
+                Auth::attempt(['fullname' => $user->fullname, 'password' => $credentials['password']])
             ) {
                 $request->session()->regenerate();
 
@@ -40,7 +40,7 @@ class LoginController extends Controller
                 $user = Auth::user();
 
                 // Menyimpan data nama lengkap dan level dalam sesi
-                $request->session()->put('nama_lengkap', $user->nama_lengkap);
+                $request->session()->put('fullname', $user->fullname);
                 $request->session()->put('level', $user->level);
 
                 if ($user->level == 'Developer') {
@@ -58,8 +58,8 @@ class LoginController extends Controller
         }
 
         return back()->withErrors([
-            'nomor_telfon' => 'The provided credentials do not match our records.',
-        ])->onlyInput('nomor_telfon');
+            'number_phone' => 'The provided credentials do not match our records.',
+        ])->onlyInput('number_phone');
     }
 
 
