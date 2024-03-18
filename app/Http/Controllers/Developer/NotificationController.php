@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class NotificationController extends Controller
 {
-    // mengalihkan ke halaman index notification
+    // todo mengalihkan ke halaman index notification
     public function index() {
         return view('developers.notification', ['title' => 'Dashboard | Notification']);
     }

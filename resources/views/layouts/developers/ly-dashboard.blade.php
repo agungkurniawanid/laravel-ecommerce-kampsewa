@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+
     {{-- import untuk font google poppins --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,6 +24,7 @@
     <link rel="stylesheet" href="{{ asset('css/gradient/gradient-color.css') }}">
     <link rel="stylesheet" href="{{ asset('css/arsir/corak.css') }}">
     <link rel="stylesheet" href="{{ asset('css/universeio/input-for-data-feedback.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/input/numbertype.css') }}">
 
     {{-- import icon untuk tab --}}
     <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">

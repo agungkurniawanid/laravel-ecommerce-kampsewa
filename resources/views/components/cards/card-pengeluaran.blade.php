@@ -1,5 +1,8 @@
+{{-- todo container card --}}
 <div class="_card-expenses relative bg-white rounded-[20px] w-full">
     <div class="_wrapper-content-card h-full grid bg-white rounded-[20px] grid-cols-1 p-[1rem] justify-between w-full">
+
+        {{-- todo bagian title card --}}
         <div class="w-full flex justify-between items-center">
             <div class="w-auto">
                 <p class="text-[#343B7C] text-[16px]">Pengeluaran</p>
@@ -15,6 +18,8 @@
                 <i class="text-[14px] mt-[5px] fi fi-br-arrow-up-right"></i>
             </div>
         </div>
+
+        {{-- todo bagian statistic card --}}
         <div class="_static">
             <p class="text-[12px] mb-[10px] text-[#343B7C]">Maximal <strong>Rp. 100.000.000</strong></p>
             <div class="w-full h-[40px] bg-[#F2F5FD] rounded-[10px]">

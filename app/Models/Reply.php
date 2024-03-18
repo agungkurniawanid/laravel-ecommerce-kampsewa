@@ -8,6 +8,17 @@ use Illuminate\Database\Eloquent\Model;
 class Reply extends Model
 {
     use HasFactory;
+
+    // todo kolom yang harus di isi manual
+    protected $fillable = [
+        'id_replies',
+        'id_feedback',
+        'id_user',
+        'date_replies',
+        'description_replies',
+    ];
+
+    // todo membuat fungsi generate id iklan otomasis
     protected static function boot()
     {
         parent::boot();
@@ -16,7 +27,7 @@ class Reply extends Model
             // Generate a random number with 15 digits
             $randomNumber = mt_rand(1, 999999999999999);
             // Pad the random number with leading zeros to make it 15 digits long
-            $paddedNumber = str_pad($randomNumber, 15, '0', STR_PAD_LEFT);
+            $paddedNumber = str_pad($randomNumber, 13, '0', STR_PAD_LEFT);
             // Set the id with the 'user' prefix and the padded random number
             $replies->id_replies = 'replies' . $paddedNumber;
         });

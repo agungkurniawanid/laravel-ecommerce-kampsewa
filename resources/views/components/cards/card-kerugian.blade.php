@@ -1,4 +1,6 @@
+{{-- todo container card --}}
 <div class="_card-kerugian flex justify-between p-[20px] w-full h-full bg-white rounded-[20px]">
+    {{-- todo bagian kiri title card --}}
     <div class="_heading flex flex-col justify-between">
         <div>
             <div class="flex items-center gap-[10px]">
@@ -13,6 +15,8 @@
                 class="text-center text-[12px] gradient-1 text-white rounded-[10px] p-[10px]">Details <i
                     class="fi fi-rr-angle-right"></i></a></div>
     </div>
+
+    {{-- todo bagian canvas statistik chartjs --}}
     <div class="h-full flex justify-center items-center">
         <div class="_chart w-[100px] h-[100px] relative">
             <canvas class="" id="chart-kerugian"></canvas>

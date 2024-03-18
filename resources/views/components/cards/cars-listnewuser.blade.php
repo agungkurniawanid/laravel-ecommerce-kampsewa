@@ -1,5 +1,3 @@
-<!-- component -->
-<!-- This is an example component -->
 <div class="max-w-2xl mx-auto">
 
     <div class="p-4 max-w-md bg-white rounded-[20px] sm:p-8 dark:bg-gray-800 dark:border-gray-700">

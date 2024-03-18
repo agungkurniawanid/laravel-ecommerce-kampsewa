@@ -6,12 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    {{-- import css --}}
+    {{-- todo import css --}}
     <link rel="stylesheet" href="{{ asset('css/scrollbar/scrollbar-sidebar.css') }}">
 </head>
 
 <body>
-    <!-- component -->
     <div class="min-h-screen flex flex-col flex-auto flex-shrink-0 antialiased bg-gray-50 text-gray-800">
         <div class="fixed flex flex-col top-0 left-0 w-64 bg-white h-full border-r">
             <div class="px-5 flex mt-[20px] items-center h-14">
@@ -20,7 +19,7 @@
             <div class="overflow-y-auto overflow-x-hidden flex-grow">
                 <ul class="flex flex-col py-4 space-y-1">
 
-                    {{-- MENU UTAMA --}}
+                    {{-- todo MENU UTAMA --}}
                     <li class="px-5">
                         <div class="flex flex-row items-center h-8">
                             <div class="text-sm font-medium tracking-wide text-[#8B97A8]">Utama</div>
@@ -50,28 +49,19 @@
                     </a>
                     </li>
 
-                    {{-- MENU CUSTOMER --}}
+                    {{-- todo MENU CUSTOMER --}}
                     <li class="px-5">
                         <div class="flex flex-row items-center h-8">
                             <div class="text-sm font-medium tracking-wide text-[#8B97A8]">Customer</div>
                         </div>
                     </li>
                     <li>
-                        <a href="#"
-                            class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6">
-                            <span class="inline-flex mt-1 justify-center items-center ml-4">
-                                <i class="fi fi-rr-users"></i>
-                            </span>
-                            <span class="ml-2 text-sm tracking-wide truncate">Semua</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6">
-                            <span class="inline-flex mt-1 justify-center items-center ml-4">
+                        <a href="{{ route('kelola-pengguna.index') }}"
+                            class="{{ $title == 'Kelola Pengguna | Developer Kamp Sewa' ? 'bg-gray-50 border-l-4 border-indigo-500' : '' }} relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6">
+                            <span class="inline-flex {{ $title == 'Kelola Pengguna | Developer Kamp Sewa' ? 'text-indigo-500' : '' }} mt-1 justify-center items-center ml-4">
                                 <i class="fi fi-rr-user-gear"></i>
                             </span>
-                            <span class="ml-2 text-sm tracking-wide truncate">Kelola</span>
+                            <span class="ml-2 text-sm tracking-wide truncate {{ $title == 'Kelola Pengguna | Developer Kamp Sewa' ? 'text-indigo-500' : '' }}">Kelola</span>
                         </a>
                     </li>
                     <li>
@@ -95,7 +85,7 @@
                         </a>
                     </li>
 
-                    {{-- MENU MONITORING FITUR --}}
+                    {{-- todo MENU MONITORING FITUR --}}
                     <li class="px-5">
                         <div class="flex flex-row items-center h-8">
                             <div class="text-sm font-medium tracking-wide text-[#8B97A8]">Monitoring Fitur</div>
@@ -110,8 +100,17 @@
                             <span class="ml-2 text-sm tracking-wide truncate">Permintaan Iklan</span>
                         </a>
                     </li>
+                    <li>
+                        <a href="#"
+                            class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6">
+                            <span class="inline-flex mt-1 justify-center items-center ml-4">
+                                <i class="fi fi-rr-badge-percent"></i>
+                            </span>
+                            <span class="ml-2 text-sm tracking-wide truncate">Diskon & Promo</span>
+                        </a>
+                    </li>
 
-                    {{-- MENU ANGGOTA --}}
+                    {{-- todo MENU ANGGOTA --}}
                     <li class="px-5">
                         <div class="flex flex-row items-center h-8">
                             <div class="text-sm font-medium tracking-wide text-[#8B97A8]">Anggota</div>
@@ -172,7 +171,7 @@
                         </a>
                     </li>
 
-                    {{-- MENU KEUANGAN --}}
+                    {{-- todo MENU KEUANGAN --}}
                     <li class="px-5">
                         <div class="flex flex-row items-center h-8">
                             <div class="text-sm font-medium tracking-wide text-[#8B97A8]">Keuangan & Laporan</div>
@@ -218,13 +217,22 @@
                         <a href="#"
                             class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6">
                             <span class="inline-flex mt-1 justify-center items-center ml-4">
+                                <i class="fi fi-rr-file-invoice-dollar"></i>
+                            </span>
+                            <span class="ml-2 text-sm tracking-wide truncate">Transaksi Keuangan</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6">
+                            <span class="inline-flex mt-1 justify-center items-center ml-4">
                                 <i class="fi fi-rr-book"></i>
                             </span>
                             <span class="ml-2 text-sm tracking-wide truncate">Rekap Keuangan</span>
                         </a>
                     </li>
 
-                    {{-- MENU SETTINGS --}}
+                    {{-- todo MENU SETTINGS --}}
                     <li class="px-5">
                         <div class="flex flex-row items-center h-8">
                             <div class="text-sm font-medium tracking-wide text-[#8B97A8]">Settings</div>

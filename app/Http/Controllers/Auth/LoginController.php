@@ -10,21 +10,22 @@ use RealRashid\SweetAlert\Facades\Alert;
 
 class LoginController extends Controller
 {
-    // mengalihkan ke view tampilan login
+    //todo mengalihkan ke view tampilan login
     public function index()
     {
         return view('auth.login', ['title' => 'Login | Kamp Sewa']);
     }
 
-    // fungsi untuk login
+    //todo fungsi untuk login
     public function login(Request $request)
     {
+        // ! validasi sesuai dengan name input dan tidak boleh kosong
         $credentials = $request->validate([
             'number_phone' => ['required'],
             'password' => ['required'],
         ]);
 
-        // Cek apakah pengguna masuk menggunakan nomor telepon atau nama lengkap
+        // ! Cek apakah pengguna masuk menggunakan nomor telepon atau nama lengkap
         $user = User::where('number_phone', $credentials['number_phone'])
             ->orWhere('fullname', $credentials['number_phone'])
             ->first();
@@ -36,13 +37,14 @@ class LoginController extends Controller
             ) {
                 $request->session()->regenerate();
 
-                // Mengambil pengguna yang berhasil login
+                // ! Mengambil pengguna yang berhasil login
                 $user = Auth::user();
 
-                // Menyimpan data nama lengkap dan level dalam sesi
+                // ! Menyimpan data nama lengkap dan level dalam sesi
                 $request->session()->put('fullname', $user->fullname);
                 $request->session()->put('level', $user->level);
 
+                // ! cek user login sesuai dengan level dan dialihkan ke dashboard bersangkutan
                 if ($user->level == 'Developer') {
                     Alert::toast('Login success', 'success');
                     return redirect('developer/dashboard/home')->with('success', 'Login success');
@@ -56,7 +58,6 @@ class LoginController extends Controller
         } else {
             Alert::toast('Pengguna tidak ditemukan', 'error');
         }
-
         return back()->withErrors([
             'number_phone' => 'The provided credentials do not match our records.',
         ])->onlyInput('number_phone');
@@ -64,7 +65,7 @@ class LoginController extends Controller
 
 
 
-    // fungsi untuk logout dari dashboard developer
+    // todo fungsi untuk logout dari dashboard developer
     public function logout(Request $request)
     {
         Auth::logout();

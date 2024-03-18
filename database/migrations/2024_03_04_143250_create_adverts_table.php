@@ -17,10 +17,7 @@ return new class extends Migration
             $table->foreign('id_user')->references('id_user')->on('users');
             $table->string('heading_advert', 50)->nullable(false);
             $table->text('description_advert')->nullable(false);
-            $table->date('advertising_start_date');
-            $table->date('advertising_end_date');
             $table->integer('budget_advert')->nullable(false);
-            $table->enum('payment_status', ['Lunas', 'Belum Lunas']);
             $table->enum('advert_status', ['Aktif', 'Non-Aktif']);
             $table->date('date_created_advert');
             $table->timestamps();

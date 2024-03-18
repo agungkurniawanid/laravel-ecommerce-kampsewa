@@ -12,13 +12,13 @@
     <nav class="bg-white w-full">
         <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
             <div class="relative flex h-[100px] items-center justify-between">
-                {{-- title --}}
+                {{-- todo title --}}
                 <div class="_title">
                     <p class="text-[16px] font-medium ">Selamat Datang,</p>
                     <p class="text-[24px] font-bold">Developer!</p>
                 </div>
 
-                <!-- Profile dropdown -->
+                {{-- todo icon notification --}}
                 <div class="relative ml-3 flex items-center gap-[50px]">
                     <div class="_icon" id="iconButton">
                         <div
@@ -30,6 +30,7 @@
                         </div>
                     </div>
 
+                    {{-- todo profile --}}
                     <div class="_profile">
                         <button id="profileButton" class="flex items-center gap-[20px]">
                             <div class="_profile-name text-right">
@@ -52,9 +53,9 @@
                             </div>
                         </button>
 
-                        <!-- Dropdown Profile Card -->
+                        {{-- todo dropdown component profile --}}
                         <div id="profileCard"
-                            class="absolute right-0 mt-2 bg-white rounded-lg shadow-lg hidden overflow-hidden">
+                            class="absolute z-10 right-0 mt-2 bg-white rounded-lg shadow-lg hidden overflow-hidden">
                             <div
                                 class="w-full max-w-sm rounded-lg bg-white p-3 drop-shadow-xl divide-y divide-gray-200">
                                 <div aria-label="header" class="flex space-x-4 items-center p-4">
@@ -65,7 +66,7 @@
                                             <div class="font-medium relative text-[16px] leading-tight text-gray-900">
                                                 <span class="flex">
                                                     <span class="truncate relative pr-8">
-                                                        {{ session('nama_lengkap') }}
+                                                        {{ session('fullname') }}
                                                     </span>
                                                 </span>
                                             </div>
@@ -185,7 +186,7 @@
                         </div>
                     </div>
 
-                    {{-- untuk dropdown notification --}}
+                    {{-- todo untuk dropdown notification --}}
                     <div id="dropdown-notification"
                         class="_wrapper-notification hidden z-10 absolute top-full w-[400px] h-[300px] overflow-y-auto bg-white shadow-box-shadow-12 rounded-[10px] right-0 overflow-hidden">
                         @for ($i = 1; $i <= 5; $i++)

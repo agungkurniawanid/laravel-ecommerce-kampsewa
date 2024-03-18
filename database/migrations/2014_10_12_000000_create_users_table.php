@@ -20,6 +20,7 @@ return new class extends Migration
             $table->enum('gender', ['Laki-laki', 'Perempuan'])->nullable(false);
             $table->text('photo')->nullable(true);
             $table->enum('level', ['Developer', 'Customer'])->nullable(false);
+            $table->string('bio', 255)->nullable(true);
             $table->rememberToken();
             $table->timestamps();
         });
