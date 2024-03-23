@@ -21,7 +21,6 @@ class UsersSeeder extends Seeder
             'gender' => 'Laki-laki',
             'photo' => null,
             'level' => 'Developer',
-            'bio' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, omnis?',
         ]);
     }
 }

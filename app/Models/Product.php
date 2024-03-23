@@ -19,7 +19,10 @@ class Product extends Model
         'stock_product',
         'status_product',
         'category_product',
-        'product_image',
+        'image-front',
+        'image-left',
+        'image-right',
+        'image-back',
     ];
 
     // todo generate otomatis id

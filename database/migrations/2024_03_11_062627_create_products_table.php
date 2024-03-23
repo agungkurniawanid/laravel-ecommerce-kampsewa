@@ -20,7 +20,10 @@ return new class extends Migration
             $table->integer('price_product')->nullable(false);
             $table->integer('stock_product')->nullable(false);
             $table->enum('status_product', ['Tersedia', 'Tidak Tersedia']);
-            $table->text('product_image')->nullable(false);
+            $table->text('image-front')->nullable(false);
+            $table->text('image-left')->nullable(false);
+            $table->text('image-right')->nullable(false);
+            $table->text('image-back')->nullable(false);
             $table->enum('category_product', ['Tenda', 'Sleeping Bag', 'Kompor', 'Perlengkapan Masak', 'Perkakas Pendakian']);
             $table->timestamps();
         });

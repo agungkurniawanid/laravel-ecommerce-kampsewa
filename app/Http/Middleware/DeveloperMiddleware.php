@@ -15,6 +15,9 @@ class DeveloperMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
+        if (auth()->check() && auth()->user()->level !== 'Developer') {
+            return response()->view('auth.unauthorized', [], 403);
+        }
         return $next($request);
     }
 }

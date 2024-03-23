@@ -155,7 +155,7 @@
                             {{-- Dropdown menu --}}
                             <div class="dropdown-menu right-0 z-10 hidden absolute bg-white shadow-md rounded-md py-2 px-3">
                                 {{-- Dropdown items --}}
-                                <a href="#" class="hover:text-[#12A4ED] dropdown-item flex gap-1 py-2">
+                                <a href="{{ route('detail-pengguna.index', ['fullname' => $item['nama']]) }}" class="hover:text-[#12A4ED] dropdown-item flex gap-1 py-2">
                                     <span class="mt-[0.15rem]"><i class="fi fi-rr-folder-open"></i></span>
                                     <span>Detail</span>
                                 </a>

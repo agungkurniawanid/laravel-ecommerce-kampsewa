@@ -58,7 +58,7 @@
                 </div>
 
                 {{-- todo tombol login --}}
-                <div class="_button w-full mt-[30px]"><button
+                <div class="_button w-full mt-[30px]"><button onclick="noRefresh(e)"
                         class="p-[15px] bg-linear-1 gradient-1 rounded-[10px] w-full text-white text-[14px]">Log
                         In</button></div>
             </form>
