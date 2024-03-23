@@ -5,21 +5,24 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class RentalTransaction extends Model
+class Produk extends Model
 {
     use HasFactory;
 
     // todo kolom yang harus di isi manual
     protected $fillable = [
-        'id_renttrans',
+        'id_produk',
         'id_user',
-        'id_product',
-        'date_transaction',
-        'date_start',
-        'date_end',
-        'total_price',
-        'amount_transaction',
-        'payment_status',
+        'nama_produk',
+        'deskripsi_produk',
+        'harga_produk',
+        'stok_produk',
+        'status_produk',
+        'gambar_depan',
+        'gambar_kiri',
+        'gambar_kanan',
+        'gambar_belakang',
+        'kategori_produk',
     ];
 
     // todo generate otomatis id
@@ -27,13 +30,13 @@ class RentalTransaction extends Model
     {
         parent::boot();
 
-        static::creating(function ($renttrans) {
+        static::creating(function ($produk) {
             // Generate a random number with 15 digits
             $randomNumber = mt_rand(1, 999999999999999);
             // Pad the random number with leading zeros to make it 15 digits long
-            $paddedNumber = str_pad($randomNumber, 11, '0', STR_PAD_LEFT);
+            $paddedNumber = str_pad($randomNumber, 14, '0', STR_PAD_LEFT);
             // Set the id with the 'user' prefix and the padded random number
-            $renttrans->id_renttrans = 'renttrans' . $paddedNumber;
+            $produk->id_produk = 'produk' . $paddedNumber;
         });
     }
 }

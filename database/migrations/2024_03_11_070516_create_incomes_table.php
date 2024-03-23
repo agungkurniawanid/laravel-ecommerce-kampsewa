@@ -11,12 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('incomes', function (Blueprint $table) {
-            $table->string('id_income', 20)->primary();
-            $table->enum('source_income', ['Iklan', 'Layanan']);
-            $table->integer('amount_income');
-            $table->date('date_income');
-            $table->text('description_income');
+        Schema::create('pemasukan', function (Blueprint $table) {
+            $table->string('id_pemasukan', 20)->primary();
+            $table->enum('sumber_pemasukan', ['Iklan', 'Layanan']);
+            $table->integer('nominal_pemasukan')->nullable(false);
+            $table->date('tanggal_pemasukan')->nullable(false);
+            $table->text('deskripsi_pemasukan')->nullable(false);
             $table->timestamps();
         });
     }
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('incomes');
+        Schema::dropIfExists('pemasukan');
     }
 };

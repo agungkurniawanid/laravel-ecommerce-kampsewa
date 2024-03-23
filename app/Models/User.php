@@ -22,12 +22,12 @@ class User extends Authenticatable
     // todo kolom dalam table yang harus di isi manual
     protected $fillable = [
         'id_user',
-        'fullname',
-        'number_phone',
+        'nama_lengkap',
+        'nomor_telfon',
         'password',
-        'date_of_birth',
-        'gender',
-        'photo',
+        'tanggal_lahir',
+        'jenis_kelamin',
+        'foto',
         'level',
     ];
 

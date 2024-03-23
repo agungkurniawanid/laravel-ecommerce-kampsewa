@@ -13,9 +13,9 @@ class Feedback extends Model
     protected $fillable = [
         'id_feedback',
         'id_user',
-        'date_feedback',
-        'description_feedback',
-        'criteria_feedback',
+        'tanggal_feedback',
+        'deskripsi_feedback',
+        'kriteria_feedback',
         'status_feedback',
     ];
 

@@ -11,18 +11,18 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('rental_transactions', function (Blueprint $table) {
-            $table->string('id_rentaltrans', 20)->primary();
+        Schema::create('transaksi_penyewaan', function (Blueprint $table) {
+            $table->string('id_transaksi_penyewaan', 20)->primary();
             $table->string('id_user', 20)->nullable(false);
             $table->foreign('id_user')->references('id_user')->on('users');
-            $table->string('id_product', 20)->nullable(false);
-            $table->foreign('id_product')->references('id_product')->on('products');
-            $table->date('date_transaction');
-            $table->date('date_start');
-            $table->date('date_end');
-            $table->integer('total_price');
-            $table->enum('payment_status', ['Lunas', 'Belum Lunas']);
-            $table->enum('rental_status', ['Aktif', 'Completed', 'Cancelled']);
+            $table->string('id_produk', 20)->nullable(false);
+            $table->foreign('id_produk')->references('id_produk')->on('produk');
+            $table->date('tanggal_transaksi_penyewaan');
+            $table->date('tanggal_mulai');
+            $table->date('tanggal_selesai');
+            $table->integer('total_harga_penyewaan');
+            $table->enum('status_pembayaran', ['Lunas', 'Belum Lunas']);
+            $table->enum('status_penyewaan', ['Aktif', 'Completed', 'Cancelled']);
             $table->timestamps();
         });
     }
@@ -32,6 +32,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('rental_transactions');
+        Schema::dropIfExists('transaksi_penyewaan');
     }
 };

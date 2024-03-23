@@ -10,14 +10,14 @@ return new class extends Migration {
      */
     public function up(): void
     {
-        Schema::create('rental_trans_details', function (Blueprint $table) {
-            $table->string('id_rentaltransdet', 20)->primary();
-            $table->string('id_rentaltrans', 20)->nullable(false);
-            $table->foreign('id_rentaltrans')->references('id_rentaltrans')->on('rental_transactions');
-            $table->string('id_product', 20)->nullable(false);
-            $table->foreign('id_product')->references('id_product')->on('products');
-            $table->integer('quantity');
-            $table->integer('price');
+        Schema::create('detail_transaksi_penyewaan', function (Blueprint $table) {
+            $table->string('id_detail_transaksi_penyewaan', 30)->primary();
+            $table->string('id_transaksi_penyewaan', 20)->nullable(false);
+            $table->foreign('id_transaksi_penyewaan')->references('id_transaksi_penyewaan')->on('transaksi_penyewaan');
+            $table->string('id_produk', 20)->nullable(false);
+            $table->foreign('id_produk')->references('id_produk')->on('produk');
+            $table->integer('qty');
+            $table->integer('subtotal');
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ return new class extends Migration {
      */
     public function down(): void
     {
-        Schema::dropIfExists('rental_trans_details');
+        Schema::dropIfExists('detail_transaksi_penyewaan');
     }
 };

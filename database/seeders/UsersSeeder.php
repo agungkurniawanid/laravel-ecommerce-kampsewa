@@ -14,12 +14,12 @@ class UsersSeeder extends Seeder
     public function run(): void
     {
         User::create([
-            'fullname' => 'Agung Kurniawan',
-            'number_phone' => '081331640909',
+            'nama_lengkap' => 'Agung Kurniawan',
+            'nomor_telfon' => '081331640909',
             'password' => bcrypt('11111'),
-            'date_of_birth' => '2000-01-01',
-            'gender' => 'Laki-laki',
-            'photo' => null,
+            'tanggal_lahir' => '2000-01-01',
+            'jenis_kelamin' => 'Laki-laki',
+            'foto' => null,
             'level' => 'Developer',
         ]);
     }

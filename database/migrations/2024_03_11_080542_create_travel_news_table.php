@@ -11,14 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('travel_news', function (Blueprint $table) {
-            $table->string('id_travelnews', 20)->primary();
-            $table->string('title');
-            $table->text('content_description');
-            $table->string('auhtor');
-            $table->date('published_date');
-            $table->enum('category_travelnews', ['Wisata', 'Tips Perjalanan', 'Lainnya']);
-            $table->text('image_travelnews');
+        Schema::create('berita_wisata', function (Blueprint $table) {
+            $table->string('id_berita_wisata', 20)->primary();
+            $table->string('title_berita_wisata');
+            $table->text('deskripsi_konten');
+            $table->string('author_berita_wisata');
+            $table->date('tanggal_publish');
+            $table->enum('kategori_berita_wisata', ['Wisata', 'Tips Perjalanan', 'Lainnya']);
+            $table->text('gambar_berita_wisata');
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('travel_news');
+        Schema::dropIfExists('berita_wisata');
     }
 };

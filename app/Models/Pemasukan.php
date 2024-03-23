@@ -5,18 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class ProfitLoss extends Model
+class Pemasukan extends Model
 {
     use HasFactory;
 
     // todo kolom yang harus di isi manual
     protected $fillable = [
-        'id_profitloss',
-        'date_profitloss',
-        'total_income',
-        'total_expenses',
-        'profit',
-        'loss',
+        'id_pemasukan',
+        'sumber_pemasukan',
+        'nominal_pemasukan',
+        'tanggal_pemasukan',
+        'deskripsi_pemasukan',
     ];
 
     // todo generate otomatis id
@@ -24,13 +23,13 @@ class ProfitLoss extends Model
     {
         parent::boot();
 
-        static::creating(function ($profitloss) {
+        static::creating(function ($pemasukan) {
             // Generate a random number with 15 digits
             $randomNumber = mt_rand(1, 999999999999999);
             // Pad the random number with leading zeros to make it 15 digits long
-            $paddedNumber = str_pad($randomNumber, 10, '0', STR_PAD_LEFT);
+            $paddedNumber = str_pad($randomNumber, 11, '0', STR_PAD_LEFT);
             // Set the id with the 'user' prefix and the padded random number
-            $profitloss->id_profitloss = 'profitloss' . $paddedNumber;
+            $pemasukan->id_pemasukan = 'pemasukan' . $paddedNumber;
         });
     }
 }

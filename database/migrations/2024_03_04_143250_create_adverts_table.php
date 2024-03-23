@@ -11,15 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('adverts', function (Blueprint $table) {
-            $table->string('id_advert', 20)->primary();
+        Schema::create('iklan', function (Blueprint $table) {
+            $table->string('id_iklan', 20)->primary();
             $table->string('id_user', 20)->nullable(false);
             $table->foreign('id_user')->references('id_user')->on('users');
-            $table->string('heading_advert', 50)->nullable(false);
-            $table->text('description_advert')->nullable(false);
-            $table->integer('budget_advert')->nullable(false);
-            $table->enum('advert_status', ['Aktif', 'Non-Aktif']);
-            $table->date('date_created_advert');
+            $table->string('judul_iklan', 50)->nullable(false);
+            $table->text('deskripsi_iklan')->nullable(false);
+            $table->integer('nominal_iklan')->nullable(false);
+            $table->enum('status_iklan', ['Aktif', 'Non-Aktif']);
+            $table->date('tanggal_pembuatan_iklan')->nullable(false);
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('adverts');
+        Schema::dropIfExists('iklan');
     }
 };

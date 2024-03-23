@@ -11,13 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('profit_losses', function (Blueprint $table) {
-            $table->string('id_profitloss', 20)->primary();
-            $table->date('date_profitloss');
-            $table->integer('total_income');
-            $table->integer('total_expenses');
-            $table->integer('profit');
-            $table->integer('loss');
+        Schema::create('keuntungan_kerugian', function (Blueprint $table) {
+            $table->string('id_keuntungan_kerugian', 30)->primary();
+            $table->date('tanggal_keuntungan_kerugian');
+            $table->integer('total_pemasukan');
+            $table->integer('total_pengeluaran');
+            $table->integer('keuntungan');
+            $table->integer('kerugian');
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('profit_losses');
+        Schema::dropIfExists('keuntungan_kerugian');
     }
 };

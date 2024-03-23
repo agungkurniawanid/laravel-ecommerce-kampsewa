@@ -35,8 +35,8 @@
                         <button id="profileButton" class="flex items-center gap-[20px]">
                             <div class="_profile-name text-right">
                                 <p class="text-[16px] font-bold">
-                                    @if (session('fullname'))
-                                        {{ session('fullname') }}
+                                    @if (session('nama_lengkap'))
+                                        {{ session('nama_lengkap') }}
                                     @endif
                                 </p>
                                 <p class="text-[14px] text-[#8B97A8]">
@@ -66,7 +66,7 @@
                                             <div class="font-medium relative text-[16px] leading-tight text-gray-900">
                                                 <span class="flex">
                                                     <span class="truncate relative pr-8">
-                                                        {{ session('fullname') }}
+                                                        {{ session('nama_lengkap') }}
                                                     </span>
                                                 </span>
                                             </div>

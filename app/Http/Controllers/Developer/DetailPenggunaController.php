@@ -7,8 +7,8 @@ use Illuminate\Http\Request;
 
 class DetailPenggunaController extends Controller
 {
-    public function index($fullname) {
-        $name = $fullname;
+    public function index($namalengkap) {
+        $name = $namalengkap;
         return view('developers.detail-pengguna', ['title' => 'Detail Pengguna', 'name' => $name]);
     }
 }

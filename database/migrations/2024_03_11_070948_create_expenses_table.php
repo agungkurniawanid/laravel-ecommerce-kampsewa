@@ -11,12 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('expenses', function (Blueprint $table) {
-            $table->string('id_expenses', 20)->primary();
-            $table->enum('category_expenses', ['Operasional', 'Pemasaran', 'Lainnya']);
-            $table->integer('amount_expenses');
-            $table->date('date_expenses');
-            $table->text('description_expenses');
+        Schema::create('pengeluaran', function (Blueprint $table) {
+            $table->string('id_pengeluaran', 20)->primary();
+            $table->enum('kategori_pengeluaran', ['Operasional', 'Pemasaran', 'Lainnya']);
+            $table->integer('nominal_pengeluaran');
+            $table->date('tanggal_pengeluaran');
+            $table->text('deskripsi_pengeluaran');
             $table->timestamps();
         });
     }
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('expenses');
+        Schema::dropIfExists('pengeluaran');
     }
 };

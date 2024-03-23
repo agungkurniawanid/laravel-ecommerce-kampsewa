@@ -45,7 +45,7 @@
                         class="_input-username w-full focus-within:border-[#5038ED] focus-within:border-[2px] rounded-[10px] bg-[#F0EDFF] p-[10px] flex items-center gap-[10px]">
                         <div class="_icon"><i class="text-[20px] font-bold fi fi-rr-user"></i></div>
                         <input class="bg-transparent w-full text-[14px] font-normal focus:outline-none" type="text"
-                            name="number_phone" placeholder="Masukkan Nama Lengkap atau nomor Telfon">
+                            name="nomor_telfon" placeholder="Masukkan Nama Lengkap atau nomor Telfon">
                     </div>
                     <div
                         class="_input-password w-full focus-within:border-[#5038ED] focus-within:border-[2px] rounded-[10px] bg-[#F0EDFF] p-[10px] flex items-center gap-[10px]">

@@ -13,12 +13,12 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->string('id_user', 20)->primary();
-            $table->char('fullname', 50)->nullable(false);
-            $table->char('number_phone', 13)->nullable(false);
+            $table->char('nama_lengkap', 50)->nullable(false);
+            $table->char('nomor_telfon', 13)->nullable(false);
             $table->string('password')->nullable(false);
-            $table->date('date_of_birth')->nullable(false);
-            $table->enum('gender', ['Laki-laki', 'Perempuan'])->nullable(false);
-            $table->text('photo')->nullable(true);
+            $table->date('tanggal_lahir')->nullable(false);
+            $table->enum('jenis_kelamin', ['Laki-laki', 'Perempuan'])->nullable(false);
+            $table->text('foto')->nullable(true);
             $table->enum('level', ['Developer', 'Customer'])->nullable(false);
             $table->rememberToken();
             $table->timestamps();

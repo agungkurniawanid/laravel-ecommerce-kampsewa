@@ -11,20 +11,20 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('products', function (Blueprint $table) {
-            $table->string('id_product', 20)->primary()->nullable(false);
+        Schema::create('produk', function (Blueprint $table) {
+            $table->string('id_produk', 20)->primary()->nullable(false);
             $table->string('id_user', 20)->nullable(false);
             $table->foreign('id_user')->references('id_user')->on('users');
-            $table->string('product_name', 50)->nullable(false);
-            $table->text('description_product')->nullable(false);
-            $table->integer('price_product')->nullable(false);
-            $table->integer('stock_product')->nullable(false);
-            $table->enum('status_product', ['Tersedia', 'Tidak Tersedia']);
-            $table->text('image-front')->nullable(false);
-            $table->text('image-left')->nullable(false);
-            $table->text('image-right')->nullable(false);
-            $table->text('image-back')->nullable(false);
-            $table->enum('category_product', ['Tenda', 'Sleeping Bag', 'Kompor', 'Perlengkapan Masak', 'Perkakas Pendakian']);
+            $table->string('nama_produk', 50)->nullable(false);
+            $table->text('deskripsi_produk')->nullable(false);
+            $table->integer('harga_produk')->nullable(false);
+            $table->integer('stok_produk')->nullable(false);
+            $table->enum('status_produk', ['Tersedia', 'Tidak Tersedia']);
+            $table->text('gambar_depan')->nullable(false);
+            $table->text('gambar_kiri')->nullable(false);
+            $table->text('gambar_kanan')->nullable(false);
+            $table->text('gambar_belakang')->nullable(false);
+            $table->enum('kategori_produk', ['Tenda', 'Sleeping Bag', 'Kompor', 'Perlengkapan Masak', 'Perkakas Pendakian']);
             $table->timestamps();
         });
     }
@@ -34,6 +34,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('products');
+        Schema::dropIfExists('produk');
     }
 };

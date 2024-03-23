@@ -11,11 +11,11 @@ class TransaksiKeuangan extends Model
 
     // todo kolom yang harus di isi manual
     protected $fillable = [
-        'id_transactionfinance',
-        'transaction_type',
-        'amount_transactionfinance',
-        'date_transactionfinance',
-        'description_transactionfinance',
+        'id_transaksi_keuangan',
+        'tipe_transaksi_keuangan',
+        'nominal_transaksi_keuangan',
+        'tanggal_transaksi_keuangan',
+        'deskripsi_transaksi_keuangan',
     ];
 
     // todo generate otomatis id
@@ -23,13 +23,13 @@ class TransaksiKeuangan extends Model
     {
         parent::boot();
 
-        static::creating(function ($transactionfinance) {
+        static::creating(function ($transaksi_keuangan) {
             // Generate a random number with 15 digits
             $randomNumber = mt_rand(1, 999999999999999);
             // Pad the random number with leading zeros to make it 15 digits long
-            $paddedNumber = str_pad($randomNumber, 10, '0', STR_PAD_LEFT);
+            $paddedNumber = str_pad($randomNumber, 12, '0', STR_PAD_LEFT);
             // Set the id with the 'user' prefix and the padded random number
-            $transactionfinance->id_transactionfinance = 'trafinance' . $paddedNumber;
+            $transaksi_keuangan->id_transaksi_keuangan = 'transaksi_keuangan' . $paddedNumber;
         });
     }
 }
