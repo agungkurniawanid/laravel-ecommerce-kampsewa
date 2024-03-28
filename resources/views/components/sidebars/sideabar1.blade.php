@@ -14,9 +14,12 @@
     <div class="min-h-screen flex flex-col flex-auto flex-shrink-0 antialiased bg-gray-50 text-gray-800">
         <div class="fixed flex flex-col top-0 left-0 w-64 bg-white h-full border-r">
             <div class="px-5 flex mt-[20px] items-center h-14">
-                <div class="text-[24px] font-black">KampSewa.</div>
+                <div class="text-[20px] font-black flex items-center gap-2">
+                    <div><img class="w-[100px]" src="{{ asset('assets/logo/logo-kampsewa.png') }}" alt=""></div>
+                    <div>KampSewa.</div>
+                </div>
             </div>
-            <div class="overflow-y-auto overflow-x-hidden flex-grow">
+            <div class="overflow-y-auto p-2 overflow-x-hidden flex-grow">
                 <ul class="flex flex-col py-4 space-y-1">
 
                     {{-- todo MENU UTAMA --}}
@@ -27,23 +30,23 @@
                     </li>
                     <li>
                         <a href="{{ route('home.index') }}"
-                            class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6 {{ $title == 'Dashboard | Developer Kamp Sewa' ? 'bg-gray-50 border-l-4 border-indigo-500' : '' }}">
+                            class="relative flex flex-row rounded-[20px] items-center h-11 focus:outline-none hover:bg-gradient-to-bl hover:from-[#B381F4] hover:to-[#5038ED] text-gray-600 hover:text-white pr-6 {{ $title == 'Dashboard | Developer Kamp Sewa' ? 'bg-gradient-to-bl from-[#B381F4] to-[#5038ED]' : '' }}">
                             <span class="inline-flex mt-1 justify-center items-center ml-4">
                                 <i
-                                    class="{{ $title == 'Dashboard | Developer Kamp Sewa' ? 'text-indigo-500' : '' }} fi fi-rr-house-chimney-window"></i>
+                                    class="{{ $title == 'Dashboard | Developer Kamp Sewa' ? 'text-white' : '' }} fi fi-rr-house-chimney-window"></i>
                             </span>
                             <span
-                                class="ml-2 text-sm tracking-wide truncate {{ $title == 'Dashboard | Developer Kamp Sewa' ? 'text-indigo-500' : '' }}">Dashboard</span>
+                                class="ml-2 text-sm tracking-wide truncate {{ $title == 'Dashboard | Developer Kamp Sewa' ? 'text-white' : '' }}">Dashboard</span>
                         </a>
                     </li>
                     <a href="{{ route('notification.index') }}"
-                        class="{{ $title == 'Dashboard | Notification' ? 'bg-gray-50 border-l-4 border-indigo-500' : '' }} relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6">
+                        class="{{ $title == 'Dashboard | Notification' ? 'bg-gradient-to-bl from-[#B381F4] to-[#5038ED]' : '' }} rounded-[20px] relative flex flex-row items-center h-11 focus:outline-none hover:bg-gradient-to-bl hover:from-[#B381F4] hover:to-[#5038ED] text-gray-600 hover:text-white border-transparent pr-6">
                         <span class="inline-flex justify-center mt-1 items-center ml-4">
                             <i
-                                class="fi fi-rr-bell {{ $title == 'Dashboard | Notification' ? 'text-indigo-500' : '' }}"></i>
+                                class="fi fi-rr-bell {{ $title == 'Dashboard | Notification' ? 'text-white' : '' }}"></i>
                         </span>
                         <span
-                            class="ml-2 {{ $title == 'Dashboard | Notification' ? 'text-indigo-500' : '' }} text-sm tracking-wide truncate">Notifications</span>
+                            class="ml-2 {{ $title == 'Dashboard | Notification' ? 'text-white' : '' }} text-sm tracking-wide truncate">Notifications</span>
                         <span
                             class="px-2 py-0.5 ml-auto text-xs font-medium tracking-wide text-red-500 bg-red-50 rounded-full">1.2k</span>
                     </a>
@@ -57,16 +60,16 @@
                     </li>
                     <li>
                         <a href="{{ route('kelola-pengguna.index') }}"
-                            class="{{ $title == 'Kelola Pengguna | Developer Kamp Sewa' ? 'bg-gray-50 border-l-4 border-indigo-500' : '' }} relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6">
-                            <span class="inline-flex {{ $title == 'Kelola Pengguna | Developer Kamp Sewa' ? 'text-indigo-500' : '' }} mt-1 justify-center items-center ml-4">
+                            class="{{ $title == 'Kelola Pengguna | Developer Kamp Sewa' ? 'bg-gradient-to-bl from-[#B381F4] to-[#5038ED]' : '' }} rounded-[20px] relative flex flex-row items-center h-11 focus:outline-none hover:bg-gradient-to-bl hover:from-[#B381F4] hover:to-[#5038ED] text-gray-600 hover:text-white border-transparent pr-6">
+                            <span class="inline-flex {{ $title == 'Kelola Pengguna | Developer Kamp Sewa' ? 'text-white' : '' }} mt-1 justify-center items-center ml-4">
                                 <i class="fi fi-rr-user-gear"></i>
                             </span>
-                            <span class="ml-2 text-sm tracking-wide truncate {{ $title == 'Kelola Pengguna | Developer Kamp Sewa' ? 'text-indigo-500' : '' }}">Kelola</span>
+                            <span class="ml-2 text-sm tracking-wide truncate {{ $title == 'Kelola Pengguna | Developer Kamp Sewa' ? 'text-white' : '' }}">Kelola</span>
                         </a>
                     </li>
                     <li>
                         <a href="#"
-                            class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6">
+                            class="relative flex flex-row items-center h-11 rounded-[20px] focus:outline-none hover:bg-gradient-to-bl hover:from-[#B381F4] hover:to-[#5038ED] text-gray-600 hover:text-white border-transparent  pr-6">
                             <span class="inline-flex mt-1 justify-center items-center ml-4">
                                 <i class="fi fi-rr-file-user"></i>
                             </span>
@@ -111,7 +114,7 @@
                     </li>
 
                     {{-- todo MENU ANGGOTA --}}
-                    <li class="px-5">
+                    {{-- <li class="px-5">
                         <div class="flex flex-row items-center h-8">
                             <div class="text-sm font-medium tracking-wide text-[#8B97A8]">Anggota</div>
                         </div>
@@ -169,7 +172,7 @@
                             </span>
                             <span class="ml-2 text-sm tracking-wide truncate">Analisis Bisnis</span>
                         </a>
-                    </li>
+                    </li> --}}
 
                     {{-- todo MENU KEUANGAN --}}
                     <li class="px-5">

@@ -11,14 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('balasan_feedback', function (Blueprint $table) {
-            $table->string('id_balasan_feedback', 20)->primary();
-            $table->string('id_feedback', 20)->nullable(false);
-            $table->foreign('id_feedback')->references('id_feedback')->on('feedback');
+        Schema::create('reset_passwords', function (Blueprint $table) {
+            $table->id();
             $table->string('id_user', 20)->nullable(false);
             $table->foreign('id_user')->references('id_user')->on('users');
-            $table->date('tanggal_balasan_feedback')->nullable(false);
-            $table->text('deskripsi_balasan_feedback')->nullable(false);
+            $table->char('kode_otp', 6)->nullable(false);
             $table->timestamps();
         });
     }
@@ -28,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('balasan_feedback');
+        Schema::dropIfExists('reset_passwords');
     }
 };

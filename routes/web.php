@@ -28,5 +28,5 @@ Route::middleware(['auth', 'developer'])->group(function () {
 
 // route authenticate to customer
 Route::middleware(['auth', 'customer'])->group(function () {
-    Route::resource('customer/dashboard/home', DashboardCustController::class);
+    Route::resource('customer/dashboard/home-customer', DashboardCustController::class);
 });
